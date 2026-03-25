@@ -1,7 +1,7 @@
 from pydantic import BaseModel, EmailStr
 from typing import Optional
 from datetime import datetime
-from app.schemas.user import AlumniProfileResponse # Import your existing profile schema
+from .schemas.user import AlumniProfileResponse # Import your existing profile schema
 
 class AlumniRecordCreate(BaseModel):
     full_name: str
