@@ -3,19 +3,19 @@ from sqlalchemy.orm import Session
 from sqlalchemy.exc import IntegrityError
 from typing import List, Optional
 
-from app.models.job import Job
-from app.models.job_application import JobApplication
-from app.models.user import User
+from .models.job import Job
+from .models.job_application import JobApplication
+from .models.user import User
 
-from app.schemas.job import JobCreate, JobResponse, JobUpdate
-from app.schemas.job_application import (
+from .schemas.job import JobCreate, JobResponse, JobUpdate
+from .schemas.job_application import (
     JobApplicationCreate,
     JobApplicationResponse,
     JobApplicationWithApplicant,
     JobApplicationStatusUpdate,
 )
 
-from app.core.security import get_db, get_current_user
+from .core.security import get_db, get_current_user
 
 router = APIRouter(prefix="/jobs", tags=["Jobs"])
 
