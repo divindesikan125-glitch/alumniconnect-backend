@@ -1,7 +1,7 @@
 from sqlalchemy import Column, Integer, String, ForeignKey, DateTime, Enum
 from sqlalchemy.orm import relationship
 from sqlalchemy.sql import func
-from app.db.database import Base
+from .db.database import Base
 import enum
 
 # Define the status options for a connection
