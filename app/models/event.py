@@ -1,7 +1,7 @@
 from datetime import datetime
 from sqlalchemy import Boolean, Column, Integer, String, Text, DateTime, ForeignKey
 from sqlalchemy.orm import relationship
-from app.db.database import Base
+from .db.database import Base
 
 class Event(Base):
     __tablename__ = "events"
