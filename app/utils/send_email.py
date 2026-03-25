@@ -1,5 +1,5 @@
 from fastapi_mail import FastMail, MessageSchema, MessageType
-from app.core.email_config import conf
+from .core.email_config import conf
 
 async def send_activation_email(email: str, token: str):
 
