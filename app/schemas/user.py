@@ -2,7 +2,7 @@ from pydantic import BaseModel, EmailStr, Field, HttpUrl
 from typing import Optional, List
 from datetime import datetime
 
-from app.schemas.alumni import AlumniProfileResponse
+from .schemas.alumni import AlumniProfileResponse
 
 # ============================================================
 # 🏫 Institution Registration Schema
