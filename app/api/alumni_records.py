@@ -5,11 +5,11 @@ from sqlalchemy.orm import Session, joinedload
 from sqlalchemy.exc import IntegrityError
 from typing import List, Optional
 
-from app.db.database import get_db
-from app.models.alumni_record import AlumniRecord
-from app.schemas.alumni_record import AlumniRecordCreate, AlumniRecordResponse
-from app.core.security import get_current_institution, get_current_user
-from app.models.user import User
+from .db.database import get_db
+from .models.alumni_record import AlumniRecord
+from .schemas.alumni_record import AlumniRecordCreate, AlumniRecordResponse
+from .core.security import get_current_institution, get_current_user
+from .models.user import User
 import csv
 from io import StringIO
 
