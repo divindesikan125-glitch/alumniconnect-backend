@@ -11,7 +11,7 @@ from sqlalchemy.sql import func
 from sqlalchemy.orm import relationship
 import enum
 
-from app.db.database import Base
+from .db.database import Base
 
 
 class ApplicationStatus(str, enum.Enum):
