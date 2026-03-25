@@ -2,14 +2,14 @@ from fastapi import APIRouter, Depends
 from sqlalchemy import func
 from sqlalchemy.orm import Session
 from datetime import datetime
-from app.db.database import get_db
-from app.models.alumni_record import AlumniRecord # Import your record model
-from app.models.user import User
-from app.models.job import Job
-from app.models.event import Event
-from app.models.job_application import JobApplication, ApplicationStatus
-from app.models.event_registration import EventRegistration
-from app.core.security import (
+from .db.database import get_db
+from .models.alumni_record import AlumniRecord # Import your record model
+from .models.user import User
+from .models.job import Job
+from .models.event import Event
+from .models.job_application import JobApplication, ApplicationStatus
+from .models.event_registration import EventRegistration
+from .core.security import (
     get_current_user,
     get_current_institution,
     get_current_alumni,
