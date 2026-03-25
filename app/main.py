@@ -18,17 +18,17 @@ from app.models.alumni import Connection
 from app.models.alumni_record import AlumniRecord
 
 # Routers
-from app.api.auth import router as auth_router
-from app.api.jobs import router as jobs_router
-from app.api.users import router as users_router
-from app.api.dashboard import router as dashboard_router
-from app.api.alumni_records import router as alumni_records_router
-from app.api import alumni as alumni_api
-from app.api.events import router as events_router
-from app.api import chat as chat_api
+from .api.auth import router as auth_router
+from .api.jobs import router as jobs_router
+from .api.users import router as users_router
+from .api.dashboard import router as dashboard_router
+from .api.alumni_records import router as alumni_records_router
+from .api import alumni as alumni_api
+from .api.events import router as events_router
+from .api import chat as chat_api
 
 # Security
-from app.core.security import get_current_user, get_db
+from .core.security import get_current_user, get_db
 
 # -------------------------
 # Setup Directories
