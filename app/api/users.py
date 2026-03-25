@@ -1,9 +1,9 @@
 from fastapi import APIRouter, Depends, UploadFile, File, HTTPException
 from sqlalchemy.orm import Session
-from app.models.user import User
-from app.models.alumni import AlumniProfile # <--- New Import
-from app.schemas.user import UserResponse, UserUpdate 
-from app.core.security import get_current_user, get_db
+from .models.user import User
+from .models.alumni import AlumniProfile # <--- New Import
+from .schemas.user import UserResponse, UserUpdate 
+from .core.security import get_current_user, get_db
 import cloudinary.uploader
 
 router = APIRouter(prefix="/users", tags=["Users"])
