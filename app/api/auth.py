@@ -4,16 +4,16 @@ from fastapi.security import OAuth2PasswordRequestForm
 from datetime import datetime, timedelta
 import secrets
 
-from app.db.database import get_db
-from app.models.user import User
-from app.schemas.user import (
+from .db.database import get_db
+from .models.user import User
+from .schemas.user import (
     InstitutionRegister,
     AlumniRegister,
     ActivateAccount,
 )
-from app.core.security import get_current_user, hash_password, verify_password, create_access_token
-from app.utils.send_email import send_activation_email
-from app.models.alumni_record import AlumniRecord
+from .core.security import get_current_user, hash_password, verify_password, create_access_token
+from .utils.send_email import send_activation_email
+from .models.alumni_record import AlumniRecord
 
 router = APIRouter(prefix="/auth", tags=["Authentication"])
 
