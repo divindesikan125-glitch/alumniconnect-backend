@@ -9,15 +9,15 @@ from sqlalchemy.exc import IntegrityError
 from typing import List
 from datetime import datetime, timezone
 
-from app.models.event import Event
-from app.models.event_registration import EventRegistration
-from app.models.user import User
+from .models.event import Event
+from .models.event_registration import EventRegistration
+from .models.user import User
 
 # Ensure EventUpdate is imported from your schemas
-from app.schemas.event import EventCreate, EventUpdate, EventResponse
-from app.schemas.event_registration import EventRegistrationResponse
+from .schemas.event import EventCreate, EventUpdate, EventResponse
+from .schemas.event_registration import EventRegistrationResponse
 
-from app.core.security import get_db, get_current_user
+from .core.security import get_db, get_current_user
 
 
 router = APIRouter(prefix="/events", tags=["Events"])
