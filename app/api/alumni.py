@@ -1,11 +1,11 @@
 from fastapi import APIRouter, Depends, HTTPException, Query
 from sqlalchemy.orm import Session
 from typing import List
-from app.models.user import User
-from app.models.alumni import AlumniProfile, Connection
-from app.schemas.user import UserResponse
-from app.schemas.alumni import AlumniProfileResponse
-from app.core.security import get_current_alumni, get_current_institution, get_current_user, get_db
+from .models.user import User
+from .models.alumni import AlumniProfile, Connection
+from .schemas.user import UserResponse
+from .schemas.alumni import AlumniProfileResponse
+from .core.security import get_current_alumni, get_current_institution, get_current_user, get_db
 
 router = APIRouter(prefix="/alumni", tags=["Alumni"])
 
