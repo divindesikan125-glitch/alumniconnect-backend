@@ -10,12 +10,12 @@ from fastapi.middleware.cors import CORSMiddleware
 from fastapi.staticfiles import StaticFiles
 from sqlalchemy.orm import Session
 
-from app.db.database import engine, Base
+from .db.database import engine, Base
 # --- CRITICAL: Added alumni to models so the table is created ---
-from app.models import user, alumni, job, event, chat as chat_model 
-from app.models.user import User
-from app.models.alumni import Connection
-from app.models.alumni_record import AlumniRecord
+from .models import user, alumni, job, event, chat as chat_model 
+from .models.user import User
+from .models.alumni import Connection
+from .models.alumni_record import AlumniRecord
 
 # Routers
 from .api.auth import router as auth_router
