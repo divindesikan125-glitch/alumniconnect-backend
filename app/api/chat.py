@@ -4,10 +4,10 @@ from sqlalchemy import and_, or_
 from typing import List, Dict
 import json
 
-from app.models.chat import ChatMessage
-from app.models.user import User
-from app.schemas.chat import ChatMessageCreate, ChatMessageResponse
-from app.core.security import get_current_user, get_db, get_user_from_token # Added get_user_from_token
+from .models.chat import ChatMessage
+from .models.user import User
+from .schemas.chat import ChatMessageCreate, ChatMessageResponse
+from .core.security import get_current_user, get_db, get_user_from_token # Added get_user_from_token
 
 router = APIRouter(prefix="/chat", tags=["Chat"])
 
