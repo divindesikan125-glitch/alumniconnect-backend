@@ -1,5 +1,5 @@
 from sqlalchemy import Column, Integer, String, Boolean, DateTime, ForeignKey
-from app.db.database import Base  # Ensure this path matches your project structure
+from .db.database import Base  # Ensure this path matches your project structure
 import datetime
 
 class Notification(Base):
