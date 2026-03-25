@@ -1,7 +1,7 @@
 from sqlalchemy import Boolean, Column, Index, Integer,String, ForeignKey, DateTime,Text
 from sqlalchemy.orm import relationship
 from datetime import datetime
-from app.db.database import Base
+from .db.database import Base
 
 
 class ChatMessage(Base):
